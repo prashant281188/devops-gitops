@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: task-api
+
+resources:
+  - ../../base
+
+images:
+  - name: ghcr.io/prashant281188/devops-task-api
+    newTag: latest
