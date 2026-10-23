@@ -8,4 +8,4 @@ resources:
 
 images:
   - name: ghcr.io/prashant281188/devops-task-api
-    newTag: latest
+    newTag: sha-85d799b1a81ca871feea5da899d85dbdb1de550e
