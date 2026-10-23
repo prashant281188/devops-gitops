@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: task-api-local
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/prashant281188/devops-gitops.git
+    targetRevision: main
+    path: apps/task-api/overlays/local
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: task-api
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
